@@ -161,6 +161,7 @@ ul.navbar-right {
 
 /*CONTENT*/
 .content {
+	max-width: 100%;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -168,6 +169,7 @@ ul.navbar-right {
 }
 
 .content-left {
+	max-width: 650px;
 	width: 50%;
 	padding: 60px 20px 10px 20px;
 }
@@ -180,7 +182,7 @@ ul.navbar-right {
 	
 }
 
-.date {
+.banned .date {
 	display:flex;
 	align-items: center;
 	font-family: 'Proxima Nova Rg';
@@ -305,11 +307,20 @@ number-text {
 	background-size: 28%;
 	}
 
+.back .right:active {
+	background: url("images/arrow-right.png") 50% 50% no-repeat #F7F7F6;
+}
+
+.back .left:active {
+	background: url("images/arrow-left.png") 50% 50% no-repeat #F7F7F6;
+}
+
 .listing {
 	display: none;
 }
 
 .columns-right {
+	max-width: 650px;
 	width: 50%;
 	padding: 60px 20px 10px 40px;
 }
@@ -333,22 +344,22 @@ number-text {
 	flex-direction: column;
 }
 
-.title {
+.title a {
 	font-size: 20px;
 	color: #000;
 	padding-bottom: 10px;
 }
 
-.title:hover {
+.title a:hover {
 	color: #e61035;
 }
 
-.subtitle {
+.subtitle a {
 	font-size: 16px;
-	color: #dcdcdc;
+	color: #a6a6a6;
 }
 
-.subtitle:hover {
+.subtitle a:hover {
 	color: #000;
 }
 
@@ -378,14 +389,18 @@ number-text {
 	padding: 5px 0px 5px 0px;
 }
 
-.project {
+.project  {
+	
 	font-size: 13px;
 	font-weight: 800;
 	background: #dcdcdc;
 	border-radius: 30px;
 	border: none;
-	outline: none;
-	
+	outline: none;	
+}
+
+.project a {
+	color: #000;
 }
 
 .down {
@@ -394,7 +409,7 @@ number-text {
 
 .down:hover {
 	background: url("images/arrow-down.png") 10% 50% no-repeat #e61035;
-	background-size: 8%;
+	background-size: 9%;
 }
 
 .button3:hover {
@@ -404,5 +419,249 @@ number-text {
 .row-1 a {
 	display: inline-block;
 	text-decoration: none;
+}
+
+
+
+
+
+
+
+.calendar {
+	display: flex;
+	align-items: center;
+	
+	height: 250px;
+	max-width: 100%;
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 50%,rgba(0,0,0,0) 100%);
+}
+
+.calendar>.date {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.date1>.mounth,
+.date2>.mounth {
+	font-weight: bold;
+	font-size: 42px;
+}
+
+.date1>.year,
+.date2>.year {
+	font-size: 22px;
+	color: #a2a2a2;
+}
+
+.date {
+	display: flex;
+	justify-content: space-between;
+}
+
+.date1 {
+	padding-left: 10%;
+	padding-bottom: 20%;
+}
+
+.date2 {
+	padding-left: 70%;
+	padding-bottom: 20%;
+}
+
+.date1,
+.date2 {
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+}
+
+.line {
+	position: absolute;
+	padding-top: 5%;
 	
 }
+
+
+
+
+.bottom-menu {
+	flex-direction: ;
+	padding: 60px 20px 40px 20px;
+}
+
+.navbar-title a:hover,
+.navbar-subtitle a:hover {
+	color: #e61035;
+}
+
+.title-menu.
+.subtitle-menu {
+	display: flex;
+}
+
+.navbar-title,
+.navbar-subtitle {
+	display: flex;
+	justify-content: center;
+}
+
+
+ul.navbar-title > li,
+ul.navbar-subtitle > li {
+	display: inline;
+}
+
+.navbar-title a {
+	display: inline-block;
+	font-family: 'Proxima Nova Rg';
+	font-weight: bold;
+	font-size: 28px;
+	text-decoration: none;
+	color: #000;
+	padding: 10px 22px;
+}
+
+
+
+.navbar-subtitle a {
+	display: inline-block;
+	font-family: 'Proxima Nova Rg';
+	font-weight: normal;
+	font-size: 20px;
+	text-decoration: none;
+	color: #a6a6a6;
+	padding: 10px 22px;
+}
+
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 100%;
+	height: 100px;
+	border-top: 1px solid #f5f5f5;
+}
+
+.footer-text {
+	width: 70%;
+}
+
+.footer-text p {
+	font-family: 'Proxima Nova Rg';
+	font-size: 13px;
+	color: #a6a6a6;
+}
+
+.footer-text b {
+	color: #000;
+}
+
+.footer-logo-left {
+	padding: 0px 20px 5px 10px;
+}
+
+.footer-logo-right {
+	padding: 0px 20px 0px 10px;
+	position: relative;
+}
+
+.img-right {
+	position: relative;
+	z-index: 1;
+}
+
+.img-right-hover {
+	position: absolute;
+	display: none;
+	z-index: 3;
+	left: 7px;
+	top: 0;
+}
+
+.footer-logo-right:hover .img-right-hover {
+	display: block;
+}
+
+ul.social-share {
+	overflow: hidden;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px 20px;
+}
+
+.div-instagram,
+.div-twitter,
+.div-facebook,
+.div-vk {
+	padding: 5px 15px;
+}
+
+.instagram {
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	background-image: url("images/icon-instagram.png");
+}
+
+.instagram:hover {
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	background-image: url("images/icon-instagram.png");
+	background-position: -25px 0 ;
+	transform: scale(1.05);
+}
+
+.twitter {
+	display: inline-block;
+	height: 25px;
+	width: 31px;
+	background-image: url("images/icon-twitter.png");
+}
+
+.twitter:hover {
+	display: inline-block;
+	height: 25px;
+	width: 31px;
+	background-image: url("images/icon-twitter.png");
+	background-position: -31px 0 ;
+	transform: scale(1.05);
+}
+
+.facebook {
+	display: inline-block;
+	height: 27px;
+	width: 13px;
+	background-image: url("images/icon-facebook.png");
+}
+
+.facebook:hover {
+	display: inline-block;
+	height: 27px;
+	width: 13px;
+	background-image: url("images/icon-facebook.png");
+	background-position: -13px 0 ;
+	transform: scale(1.05);
+}
+
+.vk {
+	display: inline-block;
+	height: 23px;
+	width: 40px;
+	background-image: url("images/icon-vk.png");
+	background-position: 0 0 ;
+}
+
+.vk:hover {
+	display: inline-block;
+	height: 23px;
+	width: 40px;
+	background-image: url("images/icon-vk.png");
+	background-position: -40px 0 ;
+	transform: scale(1.05);
+}
+	
+	
